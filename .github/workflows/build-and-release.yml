@@ -1,0 +1,55 @@
+name: Build and release resume PDF
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-extra texlive-science latexmk make
+
+      - name: Build resume.pdf
+        run: make
+
+      - name: Create GitHub Release and Upload Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_RELEASE }} # <<< use your custom PAT_RELEASE secret here
+          TAG_NAME: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          # Create release body
+          API_JSON=$(jq -n --arg tag "$TAG_NAME" --arg name "$TAG_NAME" --arg body "Automated release for $TAG_NAME" \
+            '{ tag_name: $tag, name: $name, body: $body, draft: false, prerelease: false }')
+
+          echo "Creating release for tag $TAG_NAME..."
+          RESPONSE=$(curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "$API_JSON" \
+            "https://api.github.com/repos/$REPO/releases")
+
+          # Extract upload URL
+          UPLOAD_URL=$(echo "$RESPONSE" | jq -r .upload_url | sed -e "s/{?name,label}//")
+          if [ "$UPLOAD_URL" = "null" ]; then
+            echo "Error creating release:"
+            echo "$RESPONSE"
+            exit 1
+          fi
+
+          # Upload the PDF asset
+          echo "Uploading resume.pdf to release..."
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Content-Type: application/pdf" \
+            --data-binary @resume.pdf \
+            "$UPLOAD_URL?name=Reinier%20Kip,%20Freelance%20Web%20Developer.pdf"
