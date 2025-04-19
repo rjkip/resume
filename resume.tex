@@ -1,0 +1,239 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: Michael Lustfield
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{resume}
+
+%========%
+% Resume %
+%========%
+
+%\numberedPages % NOTE: lastpage requires a second build
+%\documentFooter{\thepage of 2} % Does similar without using lastpage
+\begin{document}
+%---------%
+% Heading %
+%---------%
+\documentTitle{
+\raisebox{-7.5mm}{
+  \begin{tikzpicture}
+    \clip (0,0) circle (10mm);
+    \node at (0,0) {\includegraphics[width=20mm]{reinier.png}};
+  \end{tikzpicture}
+}
+Reinier Kip, Freelance Web Developer}{\href{tel:027 8181 957}{\raisebox{0\height} \faPhone\ 027 8181 957} ~ | ~ \href{mailto:hello@reinier.nz}{\raisebox{0\height} \faEnvelope\ hello@reinier.nz} ~ | ~ \href{https://linkedin.com/in/rjkip}{\raisebox{0\height} \faLinkedin\ linkedin.com/in/rjkip} ~ | ~ {\raisebox{0\height} \faMapPin\ Christchurch, New Zealand}}
+
+    %---------%
+    % Summary %
+    %---------%
+    \tinysection{Summary}
+    Freelance web developer with 17+ years' experience writing secure and reliable web software.
+    I hit the ground running and deliver quickly. I can work independently or as part of a team.
+    I enjoy hiking, weightlifting, and board games.
+
+          %-----------%
+          % Strengths %
+          %-----------%
+
+          \section{Strengths}
+
+          \textbf{Versatile, entrepreneurial, proactive, security-conscious, mentor, sustainable development}
+
+          % \begin{multicols}{2}
+            \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=10pt]
+              \item Managing a quick time-to-market with an MVP, or investing in long-term sustainability with a team
+              \item Writing secure and reliable software through testing, observability, and deep understanding
+              \item Breaking down concepts, resulting in a deep understanding of the browser, web protocols, security, and software design
+              \item Mentoring
+              \item Designing cloud systems, APIs, and software architecture
+              \item Championing changes and securing buy-in from stakeholders
+              \item Versatile experience as business owner
+            \end{itemize}
+          % \end{multicols}
+
+
+          %--------%
+          % Skills %
+          %--------%
+
+          \section{Skills}
+
+          \begin{multicols}{2}
+            \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=75pt]
+                \item[\textbf{Cloud}] AWS, GCP, Serverless, Big Data, Terraform
+                \item[\textbf{Languages}] TypeScript, Python, Kotlin, Java, PHP
+                \item[\textbf{Environments}] Browser, Linux, Windows, Docker
+                \item[\textbf{Frameworks}] Next.js, NestJS, SvelteKit, Spring Boot, etc.
+                \item[\textbf{Authentication}] OAuth 2.0, SAML
+                \item[\textbf{APIs}] monday.com
+                \item[\textbf{Data}] PostgreSQL, MySQL/MariaDB, Redis, S3, SQS, Athena, Pub/Sub, BigQuery
+                \item[\textbf{Business}] Work prioritisation and estimation, time management, strategy, marketing, sales, support
+            \end{itemize}
+          \end{multicols}
+
+
+          %------------%
+          % Experience %
+          %------------%
+
+          \section{Experience}
+
+
+            \headingBf{Stable Variance Ltd}{Christchurch, Oct 2023 – Present}
+            \headingIt{Co-founder}{}
+            \begin{resume_list}
+              \item Account management, customer calls, customer support, testimonial collection
+              \item Work prioritisation, estimation, planning, product ownership
+              \item Market research
+              \item Strategic thinking and planning
+              \item Networking
+              \vspace{5pt}
+              \itemTitle {Product: Calendar Plus for monday.com} \textit{Calendar SaaS}
+              \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=10pt]
+                \item 20\% MoM MRR growth, 1.8k installs
+                \item Calendar view integration with monday APIs, including shareable links and internet calendar feed
+                \item Onboarding email sequence with Bento
+                \item 5-star customer support satisfaction
+                \newline \textbf{Next.js, MySQL, monday.com API, AWS Lambda/SQS/API Gateway/EventBridge Scheduler, Terraform, Plausible, Bento}
+              \end{itemize}
+              \vspace{5pt}
+              \itemTitle {Product: “Shadow of the Prism”} \textit{Self-guided mystery puzzle tour, Christchurch CBD}
+              \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=10pt]
+                \item Story writing and puzzle design
+                \item Stripe payment integration
+                \newline \textbf{Next.js, MySQL, Stripe, Plausible, Bento, Axiom, Sentry}
+              \end{itemize}
+              \vspace{5pt}
+              \itemTitle {Product: Mock Ness} \textit{Legendary video mockups for Etsy sellers}
+              \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=10pt]
+                \item Innovative wall art video compositing process using Blender and AWS Batch,
+                \item Interior design and video renders using Blender
+                \newline \textbf{SvelteKit, MySQL, AWS Lambda/API Gateway/Batch/Step Functions, Docker, Blender, Axiom, Sentry}
+              \end{itemize}
+            \end{resume_list}
+
+            \vspace{30pt}
+            \hspace{10pt}\textit{Experience continues on the next page...}
+
+            \needspace{8\baselineskip}
+            \headingBf{Seequent}{Christchurch, Mar 2020 – Sep 2023}
+            \headingIt{Solutions Architect ← Senior Software Engineer ← DevOps Engineer}{}
+            \begin{resume_list}
+              \item Designed a billing and reporting integration, OAuth scope schema, consent screen integration API
+              \item More consistent, structured logging practices improved team agility, replaced beliefs with facts, and proved vital after incidents
+              \item Wrote documentation coworkers still praise in 2025
+              \item Maintained and operated a distributed federated identity and licensing system on AWS
+              \item Guided various SAML integrations together with customers and vendor
+              \item Proactively identified and managed resolution of security vulnerabilities
+              \newline \textbf{Java, Python, FastAPI, Flask, React, OAuth 2.0, SAML, AWS Lambda/API Gateway/RDS/Elastic Beanstalk/CloudFormation/S3/Athena, Docker, Datadog, Ansible}
+            \end{resume_list}
+
+
+            \needspace{6\baselineskip}
+            \headingBf{bol.com}{The Netherlands, Aug 2017 – Dec 2019}
+            \headingIt{Senior Software Engineer}{}
+            \begin{resume_list}
+              \item Praised for ability to hit the ground running
+              \item Delivered and operated distributed system of cloud and on-prem services, big data repository
+              \item Made key pricing data accessible to ecommerce business stakeholders
+              \item Initiated multi-month refactoring to increase velocity and create new business development opportunities, securing buy-in from team and business stakeholders
+              \item Reduced team toil by championing standards and automation
+              \item Conducted hiring interviews
+              \newline \textbf{Kotlin, Java, Bash, Spring Boot, GCP Buckets/BigQuery/PubSub, Docker, Kubernetes, Grafana, Prometheus, HDFS, Apache Beam}
+            \end{resume_list}
+
+
+            \needspace{6\baselineskip}
+            \headingBf{Ibuildings}{The Netherlands, May 2014 – Aug 2017}
+            \headingIt{Senior Software Engineer ← Intermediate Software Engineer}{}
+            \begin{resume_list}
+              \item Integrated SMS and Yubikey into a SAML 2FA gateway
+              \item Designed a mechanism that allows users to exercise their right to be forgotten (GDPR) in an event sourcing environment
+              \item Safely refactored and extended a legacy, life-saving risk assessment application used in railway maintenance
+              \item Organised community meetups, hosted coding dojos and presented on reactive streams and React Native
+            \end{resume_list}
+
+
+            \headingBf{Reprovinci}{The Netherlands, Feb 2011 – May 2014}
+            \headingIt{Software Engineer}{}
+            \begin{resume_list}
+              \item Improved in-house CMS performance by 60-85\%
+              \item Integrated iDEAL financial payment service into in-house CMS
+              \item Introduced version control, automated unit testing, automated deployment
+              \item Implemented website designs and custom extensions using in-house CMS
+              \item Accompanied project manager to clients for requirements gathering and demos
+            \end{resume_list}
+
+
+            \headingBf{Sequential Media}{The Netherlands, Oct 2007 – Feb 2011}
+            \headingIt{Software Engineer}{}
+            \begin{resume_list}
+              \item Miscellaneous back- and front-end maintenance; in-house CMS development
+            \end{resume_list}
+
+          %-----------%
+          % Education %
+          %-----------%
+
+          \section{Education}
+
+            \headingBf{University of Applied Sciences, Utrecht, the Netherlands}{2011}
+            \headingIt{Bachelor of Science in Computer Science}{}
+
+            % \vspace{5pt}
+            % \headingBf{Certifications}{}
+            % \begin{resume_list}
+            %   \item Salt \hspace{2pt}- SaltStack Certified Engineer
+            %   \item GCP - Professional Cloud Architect
+            % \end{resume_list}
+
+
+          %----------%
+          % Projects %
+          %----------%
+
+          % \section{Projects}
+
+          %   \headingBf{“Shadow of the Prism” by Southern Escape Tours (self employed)}{Oct 2024 – Present}
+          %   \begin{resume_list}
+          %     \item Self-guided mystery puzzle tour in Christchurch CBD
+          %     \item Next.js, MySQL
+          %     \item Story and puzzle design
+          %     \item Email delivery using Bento
+          %     \item Stripe payment integration
+
+          %   \end{resume_list}
+
+          %--------------%
+          % Testimonials %
+          %--------------%
+
+          \section{Testimonials}
+
+            \vspace{5pt}
+
+            \begin{quote}
+              “I'm convinced that Reinier is an asset for any team.”
+
+              — \textbf{Daan van Renterghem}, \textit{Team lead at Ibuildings}
+            \end{quote}
+
+            \begin{quote}
+              “Reinier’s approach to testing made our systems more reliable and robust which improved our deploy cycles and the code quality.”
+
+              — \textbf{Kardelen Hatun}, \textit{Team lead at bol.com}
+            \end{quote}
+
+            \begin{quote}
+              “Reinier has a high sense of responsibility that reflects [in] his ability to get things done in the short term while setting things up right for the long term.”
+
+              — \textbf{Niels van den Berg}, \textit{Software engineer at bol.com}
+            \end{quote}
+
+\end{document}
