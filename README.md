@@ -1,6 +1,6 @@
 # Resume
 
-[![Reinier Kip, Freelance Web Developer](resume.webp)](https://github.com/rjkip/resume/releases/latest/download/Reinier.Kip.Freelance.Web.Developer.pdf)
+[![Reinier Kip, Freelance Software Engineer & Architect](resume.webp)](https://github.com/rjkip/resume/releases/latest/download/Reinier.Kip.Freelance.Software.Engineer.and.Architect.pdf)
 
 ## Build
 

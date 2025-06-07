@@ -52,4 +52,4 @@ jobs:
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Content-Type: application/pdf" \
             --data-binary @resume.pdf \
-            "$UPLOAD_URL?name=Reinier%20Kip,%20Freelance%20Web%20Developer.pdf"
+            "$UPLOAD_URL?name=Reinier%20Kip,%20Freelance%20Software%20Engineer%20and%20Architect.pdf"
